@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:river_mv_cl/app/path_router.dart';
+import 'package:river_mv_cl/features/dog/presentation/pages/dog_page.dart';
 import 'package:river_mv_cl/test/hook/container_hook.dart';
 import 'package:river_mv_cl/test/page/container_page.dart';
 
@@ -11,6 +12,8 @@ class AppRouter {
         return _buildPageRoute(ContainerPage(), settings);
       case PathRouter.containerHook:
         return _buildPageRoute(ContainerHook(), settings);
+      case PathRouter.dog:
+        return _buildPageRoute(const DogPage(), settings);
       default:
         return _buildPageRoute(
           const Scaffold(body: Center(child: Text('No route defined'))),
